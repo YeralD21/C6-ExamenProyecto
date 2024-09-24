@@ -10,7 +10,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@RequestMapping("/asis")
+@RequestMapping("/sys")
 public class MessagesController {
 
     @GetMapping("/messages")

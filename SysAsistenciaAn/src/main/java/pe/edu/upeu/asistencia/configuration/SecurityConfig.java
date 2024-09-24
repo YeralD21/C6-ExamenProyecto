@@ -27,10 +27,10 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers(HttpMethod.POST, "asis/login",
-                                "asis/register")
+                        .requestMatchers(HttpMethod.POST, "sys/login",
+                                "sys/register")
                         .permitAll()
-                        .requestMatchers(HttpMethod.GET,"/v3/**","/doc/**","asis/messages", "/image/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/v3/**","/doc/**","sys/messages", "/image/**", "sys/persona/list").permitAll()
                         .anyRequest().authenticated())
         ;
         return http.build();

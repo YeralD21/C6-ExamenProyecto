@@ -18,7 +18,7 @@ import pe.edu.upeu.asistencia.services.PersonaService;
  * @author DELL
  */
 @RestController
-@RequestMapping("/asis/persona")
+@RequestMapping("/sys/persona")
 public class PersonaController {
     @Autowired
     private PersonaService entidadService;    

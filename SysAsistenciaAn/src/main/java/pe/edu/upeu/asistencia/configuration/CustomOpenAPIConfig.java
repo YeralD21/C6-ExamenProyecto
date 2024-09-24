@@ -11,9 +11,9 @@ public class CustomOpenAPIConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI().info(new Info()
-                .title("OPEN API SISTEMA DE ASISTENCIA")
+                .title("OPEN API - SISTEMA PARA LA GETION DE GRADO")
                 .version("0.0.1")
-                .description("Servicios web de asistencia")
+                .description("Servicios web de gestion de grado academico")
                 .termsOfService("http://swagger.io/terms/")
                 .license(new License().name("Apache 2.0").url("http://springdoc.org"))
         );

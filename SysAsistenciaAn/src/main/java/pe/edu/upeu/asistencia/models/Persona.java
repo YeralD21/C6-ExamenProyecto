@@ -4,19 +4,12 @@
  */
 package pe.edu.upeu.asistencia.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -54,14 +47,4 @@ public class Persona {
     private String tipo;    
     @Column(name = "estado", nullable = false, length = 8)
     private String estado;
-    
-    @JoinColumn(name = "escuela_id", referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    @JsonIgnoreProperties({"personas"})
-    private Escuela escuelaId;    
-    
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "persona_id", referencedColumnName = "id")
-    @JsonIgnoreProperties({"personaId"})
-    public List<Matricula> matriculas;     
 }

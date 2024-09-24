@@ -1,6 +1,5 @@
 package pe.edu.upeu.asistencia.mappers;
 
-
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import pe.edu.upeu.asistencia.dtos.UsuarioCrearDto;

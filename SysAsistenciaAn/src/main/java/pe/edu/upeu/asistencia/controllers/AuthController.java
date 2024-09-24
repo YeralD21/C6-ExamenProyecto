@@ -20,7 +20,7 @@ import pe.edu.upeu.asistencia.services.UsuarioService;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/asis")
+@RequestMapping("/sys")
 public class AuthController {
 
     private final UsuarioService userService;
